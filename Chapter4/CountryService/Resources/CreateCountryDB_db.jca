@@ -1,0 +1,13 @@
+<adapter-config name="CreateCountryDB" adapter="db" wsdlLocation="CreateCountryDB.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="soadb_saibot" location="eis/DB/SaibotCommonDB" UIStrongXSD="false"/>
+  <endpoint-interaction portType="CreateCountryDB_ptt" operation="CreateCountryDB">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="QSAUDE"/>
+      <property name="PackageName" value="dbo"/>
+      <property name="ProcedureName" value="PR_INSERT_CMN_COUNTRIE"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>
